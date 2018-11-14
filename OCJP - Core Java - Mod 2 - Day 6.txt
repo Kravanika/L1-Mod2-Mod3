@@ -1,0 +1,485 @@
+
+
+OCJP - Core Java - Mod 2 - Day 6
+
+
+Q. Whats is the output?
+
+import java.util.ArrayList;
+import java.util.List;
+public class Test {     
+      public static void main(String[] args) {
+           List<String> list = new ArrayList<>();
+           list.add("English");
+           list.add("Hindi");
+           list.add("Kannada");
+           list.add("Marathi");
+           list.add("Tamil");
+           list.add("Telugu");
+           list.add(2,"Oriya");
+           System.out.print(list.get(4));
+           list.remove(3);
+           System.out.print(list.get(4));
+      }
+}
+1). TamilTelugu
+2). KannadaMarathi
+3). MarathiTamil
+4). Exception at runtime
+Solution :
+option [3] is correct
+Attempted :
+option [3] is attempted
+
+
+Q. Refer the given code :
+
+public class Test {
+public static void main(String... args) {
+
+Set s = new TreeSet();
+ s.add("7");
+ s.add(9);
+ Iterator itr = s.iterator();
+ while (itr.hasNext())
+ System.out.print(itr.next() + " ");
+}
+}
+1). Compile error
+2). Runtime Exception
+3). 7 9
+4). None of the above
+Solution :
+option [2] is correct
+Attempted :
+option [1] is attempted
+
+
+
+Q. Identify 2 benefits of using ArrayList over array in Software Development.
+1). reduces memory footprint
+2). implements Collection API
+3). is multithread safe
+4). dynamically resizes based on the number of elements in the list
+Solution :
+option [1,4] are correct
+Attempted :
+option [2,3] are attempted
+
+
+
+Q. Given a pre-generics implementation of a method:
+
+11. public static int sum(List list) { 
+12. int sum = 0; 
+13. for ( Iterator iter = list.iterator(); iter.hasNext(); ) { 
+14. int i = ((Integer)iter.next()).intValue(); 
+15. sum += i; 
+16. } 
+17. return sum; 
+18. } 
+
+Which three changes must be made to the method sum to use generics? (Choose three.)
+1). Remove line 14.
+2). Replace line 13 with "for (int i : intList) {".
+3). Replace line 13 with "for (Iterator iter : intList) {".
+4). Replace the method declaration with "sum(List<int> intList)".
+5). Replace the method declaration with "sum(List<Integer> intList)"
+Solution :
+option [1,2,5] are correct
+Attempted :
+option [2,4] are attempted
+
+
+
+Q. What is the result?
+
+1. import java.util.*;
+2.
+3. public class LetterASort{
+4. public static void main(String[] args) {
+5. ArrayList<String> strings = new ArrayList<String>();
+6. strings.add("aAaA");
+7. strings.add("AaA");
+8. strings.add("aAa");
+9. strings.add("AAaa");
+10. Collections.sort(strings);
+11. for (String s : strings) { System.out.print(s + " "); }
+12. }
+13. }
+1). Compilation fails.
+2). aAaA aAa AAaa AaA
+3). AAaa AaA aAa aAaA
+4). AaA AAaa aAaA aAa
+5). aAa AaA aAaA Aaaa
+Solution :
+option [3] is correct
+Attempted :
+option [2] is attempted
+
+
+
+Q. View the Exhibit.
+public class Hat {
+public int ID =0;
+public String name = "hat";
+public String size = "One Size Fit All";
+public String color="";
+public String getName() { return name; }
+public void setName(String name) {
+this.name = name;
+}
+}
+Given
+public class TestHat {
+public static void main(String[] args) {
+Hat blackCowboyHat = new Hat();
+}
+}
+
+Which statement sets the name of the Hat instance?
+1). blackCowboyHat.setName = "Cowboy Hat";
+2). setName("Cowboy Hat");
+3). Hat.setName("Cowboy Hat");
+4). blackCowboyHat.setName("Cowboy Hat");
+Solution :
+option [4] is correct
+Attempted :
+option [3] is attempted
+
+
+
+Q. Given the code fragment:
+
+public static vodi main(String args[]){
+ArrayList<String> list= new ArrayList<>();
+list.add("SE");
+list.add("EE");
+list.add("ME");
+list.add("SE");
+list.add("EE");
+
+list.remove("SE");
+System.out.println("Values are : "+ list);
+}
+1). [ SE,EE,ME,EE]
+2). [ EE ME SE EE ]
+3). [ SE SE EE, EE]
+4). [EE ME EE]
+Solution :
+option [2] is correct
+Attempted :
+option [3] is attempted
+
+
+
+
+Q. Given the code fragment:
+
+public static vodi main(String args[]){
+ArrayList<String> list= new ArrayList<>();
+list.add("SE");
+list.add("EE");
+list.add("ME");
+list.add("SE");
+list.add("EE");
+
+list.remove("SE");
+System.out.println("Values are : "+ list);
+}
+1). [ SE,EE,ME,EE]
+2). [ EE ME SE EE ]
+3). [ SE SE EE, EE]
+4). [EE ME EE]
+Solution :
+option [2] is correct
+Attempted :
+option [3] is attempted
+
+
+
+Q. What is the output for the below code?
+
+import java.util.Iterator;
+import java.util.TreeSet;
+public class Test {
+public static void main(String... args) {
+
+TreeSet s1 = new TreeSet();
+s1.add("one");
+s1.add("two");
+s1.add("three");
+s1.add("one");
+ Iterator it = s1.iterator();
+ while (it.hasNext() ) {
+ System.out.print( it.next() + " " );
+ }
+}
+}
+1). one three two
+2). Runtime Exception
+3). one three two one
+4). one two three
+Solution :
+option [1] is correct
+Attempted :
+option [2] is attempted
+
+
+
+Q. Given: 
+
+1. public static Collection get() { 
+2.          Collection sorted = new LinkedList(); 
+3.          sorted.add("B"); sorted.add("C"); sorted.add("A"); 
+4.          return sorted; 
+5. } 
+6. public static void main(String[] args) { 
+7.          for (Object obj: get()) { 
+8.                    System.out.print(obj + ", "); 
+9.          } 
+10. } 
+
+What is the result?
+1). A,B,C
+2). B,C,A
+3). Compilation Fails
+4). The code runs without output
+5). Exception thrown
+Solution :
+option [2] is correct
+Attempted :
+option [2] is attempted
+
+
+
+Q. Given the following code:
+
+package test;
+import java.util.ArrayList;
+public class Roller {
+public static void main(String[] args) {
+ArrayList<String> collector = new ArrayList<String>( );
+collector.add("Study");
+collector.add(Integer.toOctalString(Integer.MAX_VALUE));
+ArrayList<String> names = new ArrayList<>( );
+names.addAll(collector);
+names.add("Study");
+names.add(null);
+System.out.println(names.size( ));
+}
+}
+
+What is printed on the console?
+1). 0
+2). 2
+3). 3
+4). 4
+Solution :
+option [4] is correct
+Attempted :
+option [3] is attempte
+
+
+
+Q.  Which of the following are true statements?
+1). The Iterator interface declares only three methods: hasNext, next and remove.
+2). The ListIterator interface extends both the List and Iterator interfaces.
+3). The ListIterator interface provides forward and backward iteration capabilities.
+4). The ListIterator interface provides the ability to modify the List during iteration.
+5). The ListIterator interface provides the ability to determine its position in the List.
+Solution :
+option [1,3,4,5] are correct
+Attempted :
+option [3,4] are attempted
+
+
+
+
+Q. Refer the code below:
+
+import java.util.ArrayList;
+ import java.util.List;
+ public class Test{ 
+       public static void main(String args[]) {
+        List<Integer> list = new ArrayList<Integer>(); 
+    list.add(0, 59);
+    int total = list.get(0);
+    System.out.println(total);  
+     }
+}
+1). Gives output : 0
+2). Will not compile
+3). Gives output : 59
+4). Runtime Exception
+Solution :
+option [3] is correct
+Attempted :
+option [2] is attempted
+
+
+Q. Which statements creates an ArrayList of Strings with an initial capacity of 20? 
+(Choose all that apply)
+1). ArrayList<String> names = new ArrayList<>( );
+2). ArrayList<String> names = new ArrayList<>(20);
+3). ArrayList<String> names = new ArrayList<String>( );
+4). ArrayList<String> names = new ArrayList<String>(20);
+Solution :
+option [2,4] are correct
+Attempted :
+option [2,4] are attempted
+
+
+
+Q. Given the code fragment:
+
+1. ArrayList<Integer> list = new ArrayList<>(1);
+2. list.add(1001);
+3. list.add(1002);
+4. System.out.println(list.get(list.size()));
+
+What is the result?
+1). Compilation fails due to an error on line 1.
+2). An exception is thrown at run time due to error on line 3
+3). An exception is thrown at run time due to error on line 4
+4). 1002
+Solution :
+option [3] is correct
+Attempted :
+option [3] is attempted
+
+
+
+Q.  Given:
+
+public class Concert {
+static class PowerOutage extends Exception {}
+static class Thunderstorm extends Exception {}
+public static void main(String[] args) {
+try {
+new Concert().listen();
+System.out.println("a");
+} catch(PowerOutage | Thunderstorm e) {
+e = new PowerOutage();
+System.out.println("b");
+} finally { System.out.println("c"); }
+}
+public void listen() throws PowerOutage, Thunderstorm{ }
+}
+
+What will this code print?
+1). a
+2). ab
+3). ac
+4). abc
+5). compilation error
+Solution :
+option [5] is correct
+Attempted :
+option [4] is attempted
+
+
+
+Q. If we do:
+
+ArrayList lst = new ArrayList();
+
+What is the initial capacity of the ArrayList lst ?
+1). 10
+2). 8
+3). 15
+4). 12
+Solution :
+option [1] is correct
+Attempted :
+option [3] is attempted
+
+
+Q. Given: 
+
+1. public static Collection get() { 
+2.          Collection sorted = new LinkedList(); 
+3.          sorted.add("B"); sorted.add("C"); sorted.add("A"); 
+4.          return sorted; 
+5. } 
+6. public static void main(String[] args) { 
+7.           Collection list = get();
+7.          for (Object obj: list) { 
+8.                    System.out.print(obj + ", "); 
+9.          } 
+10. } 
+
+What is the result?
+1). A, B, C
+2). B, C, A
+3). Compilation fails. 
+4). The code runs with no output. 
+Solution :
+option [2] is correct
+Attempted :
+option [3] is attempted
+
+
+
+Q. Which line of code marks the earliest point that an object referenced by intObj becomes 
+a candidate for garbage collection?
+
+11. public void genNumbers() {
+12. ArrayList numbers = new ArrayList();
+13. for (int i=0; i<10; i++) {
+14. int value = i * ((int) Math.random());
+15. Integer intObj = new Integer(value);
+16. numbers.add(intObj);
+17. }
+18. System.out.println(numbers);
+19. }
+1). Line 16
+2). Line 17
+3). Line 18
+4). Line 19
+5). The object is NOT a candidate for garbage collection.
+Solution :
+option [4] is correct
+Attempted :
+option [2] is attempted
+
+
+
+Q. What, inserted at line 39, will sort the keys in the props HashMap?
+
+34. HashMap props = new HashMap(); 
+35. props.put("key45", "some value"); 
+36. props.put("key12", "some other value"); 
+37. props.put("key39", "yet another value"); 
+38. Set s = props.keySet(); 
+39. // insert code here
+1). Arrays.sort(s);
+2). s = new TreeSet(s);
+3). Collections.sort(s);
+4). s = new SortedSet(s);
+Solution :
+option [2] is correct
+Attempted :
+option [2] is attempted
+
+
+Q. Which code, inserted at line 4, guarantees that this program will output [1, 2]?
+
+1. import java.util.*;
+2. public class Example {
+3. public static void main(String[] args) {
+4. // insert code here
+5. set.add(new Integer(2));
+6. set.add(new Integer(1));
+7. System.out.println(set);
+8. }
+9. }
+1). Set set = new TreeSet();
+2). Set set = new HashSet();
+3). Set set = new SortedSet();
+4). List set = new SortedList();
+5). Set set = new LinkedHashSet();
+Solution :
+option [1] is correct
+Attempted :
+option [3] is attempted

@@ -1,0 +1,552 @@
+
+L1 CMN Oracle Mod 1 Practice Test
+
+
+
+1Q. When two or more classes serve as base class for a derived class the situation is known as ________.
+1). Multiple inheritance
+2). Polymorphism
+3). Encapsulation
+4). Hierarchical inheritance
+Solution :
+option [1] is correct
+Attempted :
+option [3] is attempted
+
+
+Q. Which access Modifier ensures encapsulation of data?
+1). public
+2). protected
+3). private
+4). protected internal
+Solution :
+option [3] is correct
+Attempted :
+option [3] is attempted
+
+
+3Q. Which of the following is not a true UML diagram?
+1). Activity Diagram
+2). Object Diagram
+3). Deployment Diagram
+4). Data Flow Diagram
+5). Class Diagram
+Solution :
+option [4] is correct
+Attempted :
+option [2] is attempted
+
+
+4Q. Match the following notations with relevant diagrams:
+
+1. Swim lanes              a. Sequence Diagram
+2. Lifeline                      b. Usecase Diagram
+3. Stick figure               c. Object Diagram
+4. Links                           d. Activity Diagram
+1). 1. d
+2. c
+3. b
+4. a
+2). 1. b
+2. c
+3.d
+4. a
+3). 1. d
+2. a
+3. b
+4. c
+4). 1. b
+2. d
+3. c
+4. a
+Solution :
+option [3] is correct
+Attempted :
+option [1] is attempted
+
+
+5Q. What will be true as per below diagram?
+
+
+1). NetProfit attribute is accessible in all classes.
+2). Discount attribute is accessible only within the component.
+3). NetProfit attribute is accessible only within the component.
+4). CustomerCode attribute is not accessible in other class.
+Solution :
+option [3,4] are correct
+Attempted :
+option [1,2] are attempted
+
+
+
+6Q. Consider an online shopping site named "shoppee.com". 
+Customers are supposed to fill a form for ordering the items. 
+What relationship exists between form and fields available in the form?
+1). Is - A relationship
+2). Has - A relationship
+3). Realization
+4). Generalization
+Solution :
+option [2] is correct
+Attempted :
+option [3] is attempted
+
+
+
+
+7Q. Consider the below code snippet:
+
+  1  CREATE OR REPLACE PROCEDURE spAddNumber
+  2  (num1 IN NUMBER DEFAULT 10,
+  3  num2 IN NUMBER)
+  4  IS
+  5  total NUMBER;
+  6  BEGIN
+  7     total:=num1+num2;
+  8     DBMS_OUTPUT.PUT_LINE('Total: '||total);
+  9  END spAddNumber;
+
+Which statement is valid to be used for executing procedure to generate the below output?
+
+Total: 50
+1). exec spAddNumber(20,30);
+2). exec spAddNumber(num2=>30);
+3). exec spAddNumber(num2=>30,num1=>20);
+4). exec spAddNumber(num2=>30,20);
+Solution :
+option [1,3] are correct
+Attempted :
+option [2,3] are attempted
+
+8Q. Examine the structure of EMP table:
+
+
+
+Parvathy wants to view the sorted employee details based on JOB in ascending order. 
+If multiple employees are working with same JOB role, then sort the details again with salary 
+in descending order. Which of the following statement will match for the requirement?
+1). SELECT * FROM emp ORDERBY salary,job;
+2). SELECT * FROM emp ORDERBY job,salary;
+3). SELECT empno,job,salary FROM emp ORDER BY 2,3 DESC;
+4). SELECT * FROM emp ORDERBY job ,salary DESC;
+Solution :
+option [3] is correct
+Attempted :
+option [3] is attempted
+
+
+9Q. Which of the following exception will thrown when a SELECT INTO statement in a PL/SQL block 
+returns zero row?
+1). invalid_cursor
+2). no_data_found
+3). value_error
+4). too_many_rows
+Solution :
+option [2] is correct
+Attempted :
+option [4] is attempted
+
+10Q. If a Procedure is created with the following signature
+Proc1(Emp_num NUMBER, Emp_name VARCHAR2 DEFAULT 'Emp name', deptno NUMBER DEFAULT 10)
+then, which of the following option cannot be used to call the above procedure?
+1). Proc1(101,'Name1',20)
+2). Proc1(101)
+3). Proc1(101,'Name1')
+4). Proc1
+Solution :
+option [4] is correct
+Attempted :
+option [2] is attempted
+
+
+
+
+11Q. Consider the following code and predict the output:
+
+DECLARE 
+num1 NUMBER;
+BEGIN
+     DBMS_OUTPUT.PUT_LINE('Value in num1 is'||num1);
+END;
+/
+1). Value in num1 is
+2). Value in num1 is 0
+3). Compilation error as variable num1 is not assigned a value
+4). Value in num1 is some garbage value
+Solution :
+option [1] is correct
+Attempted :
+option [2] is attempted
+
+
+
+12Q. Index is used to:
+1). They are commonly used as read only objects
+2). Increase the row retrieval time.
+3). Reduce disk I/O by locating the data quickly.
+4). Increase the speed of Updates.
+Solution :
+option [1,3] are correct
+Attempted :
+option [2,3] are attempted
+
+
+13Q. What will be the output of the following code ? 
+
+DECLARE
+row1 emp%ROWTYPE;
+BEGIN
+SELECT * INTO row1 FROM emp WHERE deptno=99;
+END;
+1). No data found if deptno 99 does not exist
+2). exact fetch returns more than requested number of rows if there are many employees in dept no 99
+3). exact fetch returns more than requested number of rows if there is only one employee in dept no 99
+4). compilation error
+Solution :
+option [1,2] are correct
+Attempted :
+option [1,2] are attempted
+
+
+
+14Q. Consider the below code snippet:
+
+  1  DECLARE
+  2     -- Declaration of Cursor
+  3     CURSOR cname IS SELECT dname FROM dept;
+  4     v_dname dept.dname%TYPE;
+  5  BEGIN
+  6     FOR rec IN cname
+  7     LOOP
+  8        v_dname:=rec.dname;
+  9        DBMS_OUTPUT.PUT_LINE(v_dname);
+ 10     END LOOP;
+ 11     CLOSE cname;
+ 12  END;
+
+What will be the output generated if the above procedure gets executed?
+1). Error in Line 11
+2). Error in Line 6
+3). "No Data Found" exception occurs if data not exists in dept table.
+4). Displays all the department exists in dept table.
+Solution :
+option [1] is correct
+Attempted :
+option [2] is attempted
+
+
+15Q. Identify the true statement(s) about cursors:
+
+1. PLSQL implicitly declares cursors for all DML statements.
+2. You cannot fetch from a closed cursor.
+3. Fetch statement should be followed by an EXIT condition to avoid infinite looping
+1). Only statement 1 is true
+2). Only statement 2 is true
+3). Only statement 3 is true
+4). All the statements are true
+Solution :
+option [4] is correct
+Attempted :
+option [3] is attempted
+
+
+16Q. Assuming there are no employees in deptno 70.
+What does the following code give as output?
+
+DECLARE
+cntr NUMBER;
+myexcep EXCEPTION;
+BEGIN
+SELECT count(*) INTO cntr FROM emp WHERE deptno=70;
+IF(cntr=0) THEN
+      RAISE myexcep;
+END IF;
+EXCEPTION
+       WHEN NO_DATA_FOUND THEN
+              DBMS_OUTPUT.PUT_LINE(' no data found');
+       WHEN myexcep THEN
+              DBMS_OUTPUT.PUT_LINE(' myexception');
+END;
+1). compilation error as myexcep not declared
+2). no data found gets printed
+3). myexception gets printed
+4). no output
+Solution :
+option [3] is correct
+Attempted :
+option [2] is attempted
+
+
+17Q. Which of the event handlers are supported in button objects?
+1). OnClick
+2). OnChange
+3). OnMouseUp
+4). OnMouseDown
+Solution :
+option [1,3,4] are correct
+Attempted :
+option [2,3] are attemptedQ. Consider the below code snippet:
+
+Select a country: 
+<select name="country">
+   <option value="Germany">Germany</option>
+   <option value="India" selected>India</option>
+   <option value="China">China</option>
+   <option value="Japan" >Japan</option>
+</select> 
+
+Which of the statement(s) is/are true about the above given code snippet?
+1). User will able to select more than one country from this list
+2). Default selected country is "India"
+3). Name of this drop down list box is "country"
+4). By default, all the options are visible in the drop down list box.
+Solution :
+option [2,3] are correct
+Attempted :
+option [2,3] are attempted
+
+
+
+19Q. Rakshana likes to create an input field only to display contents and contents length may exceeds 
+more than one line. Which statement is more suitable for this requirement?
+1). <input type="text" value="Content" readonly/>
+2). <textarea readonly>Content</textarea>
+3). <textarea>Content</textarea>
+4). <textarea value="Content" disabled/>
+Solution :
+option [2] is correct
+Attempted :
+option [2] is attempted
+
+
+20Q. Which of the following statements are false with respect to XML?
+
+i)   XML document can contain more than one root element.
+ii)  XML tags are case sensitive.
+iii) XML document can contain empty elements.
+1). only i
+2). i & ii
+3). iii & iv
+4). ii & iii
+Solution :
+option [1] is correct
+Attempted :
+option [3] is attempted
+
+
+
+
+21Q. You have an application which enables a user to enter a URL. 
+The URL may contain spaces, which are not supported in requests which are sent from browsers. 
+You need to solve this problem by replacing the space by a special symbol like %. 
+How can this be achieved?
+1). Use decode method.
+2). Use append method.
+3). Use escape method.
+4). Use encode method.
+Solution :
+option [3] is correct
+Attempted :
+option [3] is attempted
+
+
+
+22Q. Which of the following selector will apply the style on the element designated by a pointing device?
+1). .hover
+2). :hover
+3). :onfocus
+4). .onfocus
+Solution :
+option [2] is correct
+Attempted :
+option [2] is attempted
+
+
+
+
+23Q. Consider HTML code snippet:
+
+<input type="checkbox" value="Web Basics" name="skill"/>WebBasics
+<input type="checkbox" value="Oracle" name="skill"/>Oracle<BR>
+<input type="checkbox" value="Core Java" name="skill"/>Core Java
+<<input type="checkbox" value="Spring" name="skill"/>Spring
+
+Consider JavaScript Code snippet:
+
+1:function validate()   {
+2: var len1=document.frm.skill.length;
+3: var skillsList='';
+4: var count=0;
+5: for(index1=0;index1<len1;index1++)    {
+6:  if(________________________)   {
+7:   count++;
+8:   skillsList=skillsList+" , "+document.frm.skill[index1].value; }
+9: }
+10: if(count==0)   {
+11:   alert("Select any one of the skills");
+12:   return false;
+13:  }  else   {
+14:   alert("Selected skills"+skillsList+"\nSelected city "+document.frm.city.value);
+15:   return true;  }
+16: }
+
+Which statement has to be included in the blank line at Line 6 to check whether any check box 
+is checked or not?
+1). document.frm.skill[index1].selected
+2). document.frm.skill[index1].checked
+3). document.frm.skill[index1].disabled
+4). document.frm.skill[index1].unchecked
+Solution :
+option [2] is correct
+Attempted :
+option [4] is attempted
+
+
+24Q. Consider the below code snippet:
+
+<employee id="rj2222"></employee>
+
+Which XML schema code snippet is valid to describe that an "id" attribute is mandatory 
+to be used in "employee" element?
+1). <xs:attribute name="id" type="xs:string"/>
+By default, all the attributes are mandatory to be used in an element.
+2). <xs:attribute name="id" type="xs:string" mandatory/>
+3). <xs:attribute name="id" type="xs:string" use="required"/>
+4). <xs:attribute name="id" type="xs:string" required="true"/>
+Solution :
+option [3] is correct
+Attempted :
+option [2] is attempted
+
+
+
+25Q. <!DOCTYPE HTML>
+<html>
+ <body>
+  <form action="">
+  Enter a date before 1980-01-01:
+  <input type="date" name="bday" max="1979-12-31">
+  <br>
+  Enter a date after 2000-01-01:
+  <input type="date" name="bday" min="2000-01-01">
+  <br>
+  <input type="submit">
+  </form>
+ </body>
+
+ Given the above code snippet in HTML5, what date the date picker will display ?
+</html>
+1). Wrong attributes used, instead use "minimum" and "maximum" with input type date to 
+apply constraints
+2). The first date is displayed from December, 1979 and after that and will span to year 1980 
+or afterwards. The second date is displayed before year 2000
+3). The first date is displayed from December, 1979 and before that and will not span to year 1980 
+or afterwards. The second date is displayed after year 2000 and not before
+4). Min and Max attributes have no effect on input type as date and date picker shows current date
+Solution :
+option [3] is correct
+Attempted :
+option [2] is attempted
+
+
+26Q. Match the following:
+
+1) *
+2) #Data
+3) .Data
+4) :Data
+
+a) Pseudoclasses selector
+b) Universal Selector
+c) Id Selector
+d) Class Selector
+1). 1-b, 2-c, 3-d, 4-a
+2). 1-b, 2-d, 3-c, 4-a
+3). 1-b, 2-c, 3-a, 4-d
+4). 1-c, 2-b, 3-d, 4-a
+Solution :
+option [1] is correct
+Attempted :
+option [2] is attempted
+
+
+27Q. Consider the below statements:
+
+A) Password should be of length 10 digits
+B) Password can be alpha-numeric
+
+Which of the defensive programming technique would be used to implement the above requirement 
+while writing the program?
+1). Error Handling
+2). Output Validation
+3). Input Validation
+4). None of the above
+Solution :
+option [3] is correct
+Attempted :
+option [2] is attempted
+
+
+28Q. Which of the following are advantages of modular programming?
+1). Modification in any module will not affect our main module.
+2). The changes made in an appropriate function will affect only that module other modules will 
+remain unaffected.
+3). The main module becomes independent of the sub modules and coupling is zeroed.
+4). The modules introduce defensive programming technique by minimizing testing effort.
+Solution :
+option [1,2] are correct
+Attempted :
+option [2,3] are attempted
+
+
+
+29Q. Select the valid statements w.r.t software testing:
+1). Software testing is in a way a destructive process
+2). Software testing is a process used to help identify the correctness, completeness and 
+quality of a developed computer software
+3). Software testing is Verifying and Validating if the Software is working as it is intended 
+to be working
+4). Software testing is the process of executing a program with the intent of finding the errors
+Solution :
+option [4] is correct
+Attempted :
+option [3] is attempted
+
+
+
+30Q. Consider the below form to Book a Rail Ticket.
+
+
+
+The user can book only ten tickets with a transaction. Choose the valid equivalence partitioning for Number of Tickets field in the given scenarion.
+1). 100 tickets is Valid.
+2). 0 and less than zero is Invalid.
+3). 10 is Valid.
+4). 11 is Invalid.
+Solution :
+option [2,3,4] are correct
+Attempted :
+option [2,3] are attempted
+
+
+
+30Q. Consider the below pseudocode:
+                 
+BEGIN       
+        content[30]= "Pseudocode"
+         FOR i=0 to content[i] not equal to end of character
+               If (content[i]>=97 AND content[i]<=122) Then
+                      content[i]=content[i]-32;
+               END IF 
+         END FOR
+END
+
+Which of the good programming practices have been followed in the above code?
+1). Layout
+2). Naming Conventions
+3). Modularity
+4). Maintainability
+Solution :
+option [1] is correct
+Attempted :
+option [2] is attempted
